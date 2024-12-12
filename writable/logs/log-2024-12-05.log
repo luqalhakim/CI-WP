@@ -1,0 +1,1556 @@
+CRITICAL - 2024-12-05 03:32:37 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "tempalates/footer.php"
+[Method: GET, Route: datakriteria]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('tempalates/footer.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('tempalates/footer', [], true)
+ 3 APPPATH\Controllers\Home.php(44): view('tempalates/footer')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->datakriteria()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 03:39:02 --> Error: Class "App\Controllers\PenilaianKriteriaModel" not found
+[Method: GET, Route: datakriteria]
+in APPPATH\Controllers\Home.php on line 40.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->datakriteria()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+ERROR - 2024-12-05 03:39:25 --> mysqli_sql_exception: Table 'weight_product.kriteria' doesn't exist in C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `penilai...', 0)
+#1 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `penilai...')
+#2 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `penilai...')
+#3 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `penilai...', Array, false)
+#4 C:\xampp\htdocs\ci_wp\app\Models\DataKriteriaModel.php(19): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci_wp\app\Controllers\Home.php(41): App\Models\DataKriteriaModel->getPenilaian()
+#6 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Home->datakriteria()
+#7 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\ci_wp\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-12-05 03:39:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'weight_product.kriteria' doesn't exist
+[Method: GET, Route: datakriteria]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `penilaian_kriteria`.*, `karyawan_baru`.`nama_karyawan`, `kriteria`.`nama_kriteria`
+FROM `penilaian_karyawan`
+JOIN `karyawan_baru` ON `karyawan_baru`.`id` = `penilaian_kriteria`.`karyawan_id`
+JOIN `kriteria` ON `kriteria`.`id` = `penilaian_kriteria`.`kriteria_id`', [], false)
+ 2 APPPATH\Models\DataKriteriaModel.php(19): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(41): App\Models\DataKriteriaModel->getPenilaian()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->datakriteria()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 03:39:25 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'weight_product.kriteria' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `penilaian_kriteria`.*, `karyawan_baru`.`nama_karyawan`, `kriteria`.`nama_kriteria`
+FROM `penilaian_karyawan`
+JOIN `karyawan_baru` ON `karyawan_baru`.`id` = `penilaian_kriteria`.`karyawan_id`
+JOIN `kriteria` ON `kriteria`.`id` = `penilaian_kriteria`.`kriteria_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `penilaian_kriteria`.*, `karyawan_baru`.`nama_karyawan`, `kriteria`.`nama_kriteria`
+FROM `penilaian_karyawan`
+JOIN `karyawan_baru` ON `karyawan_baru`.`id` = `penilaian_kriteria`.`karyawan_id`
+JOIN `kriteria` ON `kriteria`.`id` = `penilaian_kriteria`.`kriteria_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `penilaian_kriteria`.*, `karyawan_baru`.`nama_karyawan`, `kriteria`.`nama_kriteria`
+FROM `penilaian_karyawan`
+JOIN `karyawan_baru` ON `karyawan_baru`.`id` = `penilaian_kriteria`.`karyawan_id`
+JOIN `kriteria` ON `kriteria`.`id` = `penilaian_kriteria`.`kriteria_id`', [], false)
+ 4 APPPATH\Models\DataKriteriaModel.php(19): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Home.php(41): App\Models\DataKriteriaModel->getPenilaian()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->datakriteria()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 03:39:25 --> [Caused by] mysqli_sql_exception: Table 'weight_product.kriteria' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `penilaian_kriteria`.*, `karyawan_baru`.`nama_karyawan`, `kriteria`.`nama_kriteria`
+FROM `penilaian_karyawan`
+JOIN `karyawan_baru` ON `karyawan_baru`.`id` = `penilaian_kriteria`.`karyawan_id`
+JOIN `kriteria` ON `kriteria`.`id` = `penilaian_kriteria`.`kriteria_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `penilaian_kriteria`.*, `karyawan_baru`.`nama_karyawan`, `kriteria`.`nama_kriteria`
+FROM `penilaian_karyawan`
+JOIN `karyawan_baru` ON `karyawan_baru`.`id` = `penilaian_kriteria`.`karyawan_id`
+JOIN `kriteria` ON `kriteria`.`id` = `penilaian_kriteria`.`kriteria_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `penilaian_kriteria`.*, `karyawan_baru`.`nama_karyawan`, `kriteria`.`nama_kriteria`
+FROM `penilaian_karyawan`
+JOIN `karyawan_baru` ON `karyawan_baru`.`id` = `penilaian_kriteria`.`karyawan_id`
+JOIN `kriteria` ON `kriteria`.`id` = `penilaian_kriteria`.`kriteria_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `penilaian_kriteria`.*, `karyawan_baru`.`nama_karyawan`, `kriteria`.`nama_kriteria`
+FROM `penilaian_karyawan`
+JOIN `karyawan_baru` ON `karyawan_baru`.`id` = `penilaian_kriteria`.`karyawan_id`
+JOIN `kriteria` ON `kriteria`.`id` = `penilaian_kriteria`.`kriteria_id`', [], false)
+ 5 APPPATH\Models\DataKriteriaModel.php(19): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(41): App\Models\DataKriteriaModel->getPenilaian()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->datakriteria()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+ERROR - 2024-12-05 03:40:59 --> mysqli_sql_exception: Table 'weight_product.kriteria' doesn't exist in C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `penilai...', 0)
+#1 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `penilai...')
+#2 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `penilai...')
+#3 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `penilai...', Array, false)
+#4 C:\xampp\htdocs\ci_wp\app\Models\DataKriteriaModel.php(19): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci_wp\app\Controllers\Home.php(41): App\Models\DataKriteriaModel->getPenilaian()
+#6 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Home->datakriteria()
+#7 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\ci_wp\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-12-05 03:40:59 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'weight_product.kriteria' doesn't exist
+[Method: GET, Route: datakriteria]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `penilaian_karyawan`.*, `karyawan_baru`.`nama_karyawan`, `kriteria`.`nama_kriteria`
+FROM `penilaian_karyawan`
+JOIN `karyawan_baru` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`
+JOIN `kriteria` ON `kriteria`.`id` = `penilaian_kriteria`.`kriteria_id`', [], false)
+ 2 APPPATH\Models\DataKriteriaModel.php(19): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(41): App\Models\DataKriteriaModel->getPenilaian()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->datakriteria()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 03:40:59 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'weight_product.kriteria' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `penilaian_karyawan`.*, `karyawan_baru`.`nama_karyawan`, `kriteria`.`nama_kriteria`
+FROM `penilaian_karyawan`
+JOIN `karyawan_baru` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`
+JOIN `kriteria` ON `kriteria`.`id` = `penilaian_kriteria`.`kriteria_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `penilaian_karyawan`.*, `karyawan_baru`.`nama_karyawan`, `kriteria`.`nama_kriteria`
+FROM `penilaian_karyawan`
+JOIN `karyawan_baru` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`
+JOIN `kriteria` ON `kriteria`.`id` = `penilaian_kriteria`.`kriteria_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `penilaian_karyawan`.*, `karyawan_baru`.`nama_karyawan`, `kriteria`.`nama_kriteria`
+FROM `penilaian_karyawan`
+JOIN `karyawan_baru` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`
+JOIN `kriteria` ON `kriteria`.`id` = `penilaian_kriteria`.`kriteria_id`', [], false)
+ 4 APPPATH\Models\DataKriteriaModel.php(19): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Home.php(41): App\Models\DataKriteriaModel->getPenilaian()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->datakriteria()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 03:40:59 --> [Caused by] mysqli_sql_exception: Table 'weight_product.kriteria' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `penilaian_karyawan`.*, `karyawan_baru`.`nama_karyawan`, `kriteria`.`nama_kriteria`
+FROM `penilaian_karyawan`
+JOIN `karyawan_baru` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`
+JOIN `kriteria` ON `kriteria`.`id` = `penilaian_kriteria`.`kriteria_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `penilaian_karyawan`.*, `karyawan_baru`.`nama_karyawan`, `kriteria`.`nama_kriteria`
+FROM `penilaian_karyawan`
+JOIN `karyawan_baru` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`
+JOIN `kriteria` ON `kriteria`.`id` = `penilaian_kriteria`.`kriteria_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `penilaian_karyawan`.*, `karyawan_baru`.`nama_karyawan`, `kriteria`.`nama_kriteria`
+FROM `penilaian_karyawan`
+JOIN `karyawan_baru` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`
+JOIN `kriteria` ON `kriteria`.`id` = `penilaian_kriteria`.`kriteria_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `penilaian_karyawan`.*, `karyawan_baru`.`nama_karyawan`, `kriteria`.`nama_kriteria`
+FROM `penilaian_karyawan`
+JOIN `karyawan_baru` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`
+JOIN `kriteria` ON `kriteria`.`id` = `penilaian_kriteria`.`kriteria_id`', [], false)
+ 5 APPPATH\Models\DataKriteriaModel.php(19): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(41): App\Models\DataKriteriaModel->getPenilaian()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->datakriteria()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+ERROR - 2024-12-05 03:41:21 --> mysqli_sql_exception: Table 'weight_product.kriteria' doesn't exist in C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `penilai...', 0)
+#1 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `penilai...')
+#2 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `penilai...')
+#3 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `penilai...', Array, false)
+#4 C:\xampp\htdocs\ci_wp\app\Models\DataKriteriaModel.php(19): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci_wp\app\Controllers\Home.php(41): App\Models\DataKriteriaModel->getPenilaian()
+#6 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Home->datakriteria()
+#7 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\ci_wp\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-12-05 03:41:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'weight_product.kriteria' doesn't exist
+[Method: GET, Route: datakriteria]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `penilaian_karyawan`.*, `karyawan_baru`.`nama_karyawan`, `kriteria`.`nama_kriteria`
+FROM `penilaian_karyawan`
+JOIN `karyawan_baru` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`
+JOIN `kriteria` ON `kriteria`.`id` = `penilaian_karyawan`.`kriteria_id`', [], false)
+ 2 APPPATH\Models\DataKriteriaModel.php(19): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(41): App\Models\DataKriteriaModel->getPenilaian()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->datakriteria()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 03:41:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'weight_product.kriteria' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `penilaian_karyawan`.*, `karyawan_baru`.`nama_karyawan`, `kriteria`.`nama_kriteria`
+FROM `penilaian_karyawan`
+JOIN `karyawan_baru` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`
+JOIN `kriteria` ON `kriteria`.`id` = `penilaian_karyawan`.`kriteria_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `penilaian_karyawan`.*, `karyawan_baru`.`nama_karyawan`, `kriteria`.`nama_kriteria`
+FROM `penilaian_karyawan`
+JOIN `karyawan_baru` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`
+JOIN `kriteria` ON `kriteria`.`id` = `penilaian_karyawan`.`kriteria_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `penilaian_karyawan`.*, `karyawan_baru`.`nama_karyawan`, `kriteria`.`nama_kriteria`
+FROM `penilaian_karyawan`
+JOIN `karyawan_baru` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`
+JOIN `kriteria` ON `kriteria`.`id` = `penilaian_karyawan`.`kriteria_id`', [], false)
+ 4 APPPATH\Models\DataKriteriaModel.php(19): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Home.php(41): App\Models\DataKriteriaModel->getPenilaian()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->datakriteria()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 03:41:21 --> [Caused by] mysqli_sql_exception: Table 'weight_product.kriteria' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `penilaian_karyawan`.*, `karyawan_baru`.`nama_karyawan`, `kriteria`.`nama_kriteria`
+FROM `penilaian_karyawan`
+JOIN `karyawan_baru` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`
+JOIN `kriteria` ON `kriteria`.`id` = `penilaian_karyawan`.`kriteria_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `penilaian_karyawan`.*, `karyawan_baru`.`nama_karyawan`, `kriteria`.`nama_kriteria`
+FROM `penilaian_karyawan`
+JOIN `karyawan_baru` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`
+JOIN `kriteria` ON `kriteria`.`id` = `penilaian_karyawan`.`kriteria_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `penilaian_karyawan`.*, `karyawan_baru`.`nama_karyawan`, `kriteria`.`nama_kriteria`
+FROM `penilaian_karyawan`
+JOIN `karyawan_baru` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`
+JOIN `kriteria` ON `kriteria`.`id` = `penilaian_karyawan`.`kriteria_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `penilaian_karyawan`.*, `karyawan_baru`.`nama_karyawan`, `kriteria`.`nama_kriteria`
+FROM `penilaian_karyawan`
+JOIN `karyawan_baru` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`
+JOIN `kriteria` ON `kriteria`.`id` = `penilaian_karyawan`.`kriteria_id`', [], false)
+ 5 APPPATH\Models\DataKriteriaModel.php(19): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(41): App\Models\DataKriteriaModel->getPenilaian()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->datakriteria()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+ERROR - 2024-12-05 03:42:57 --> mysqli_sql_exception: Table 'weight_product.kriteria' doesn't exist in C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `penilai...', 0)
+#1 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `penilai...')
+#2 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `penilai...')
+#3 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `penilai...', Array, false)
+#4 C:\xampp\htdocs\ci_wp\app\Models\DataKriteriaModel.php(19): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci_wp\app\Controllers\Home.php(41): App\Models\DataKriteriaModel->getPenilaian()
+#6 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Home->datakriteria()
+#7 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\ci_wp\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-12-05 03:42:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'weight_product.kriteria' doesn't exist
+[Method: GET, Route: datakriteria]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `penilaian_karyawan`.*, `karyawan_baru`.`nama_karyawan`, `kriteria`.`nama_kriteria`
+FROM `penilaian_karyawan`
+JOIN `karyawan_baru` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`
+JOIN `kriteria` ON `kriteria`.`id` = `penilaian_karyawan`.`kriteria_id`', [], false)
+ 2 APPPATH\Models\DataKriteriaModel.php(19): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(41): App\Models\DataKriteriaModel->getPenilaian()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->datakriteria()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 03:42:57 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'weight_product.kriteria' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `penilaian_karyawan`.*, `karyawan_baru`.`nama_karyawan`, `kriteria`.`nama_kriteria`
+FROM `penilaian_karyawan`
+JOIN `karyawan_baru` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`
+JOIN `kriteria` ON `kriteria`.`id` = `penilaian_karyawan`.`kriteria_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `penilaian_karyawan`.*, `karyawan_baru`.`nama_karyawan`, `kriteria`.`nama_kriteria`
+FROM `penilaian_karyawan`
+JOIN `karyawan_baru` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`
+JOIN `kriteria` ON `kriteria`.`id` = `penilaian_karyawan`.`kriteria_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `penilaian_karyawan`.*, `karyawan_baru`.`nama_karyawan`, `kriteria`.`nama_kriteria`
+FROM `penilaian_karyawan`
+JOIN `karyawan_baru` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`
+JOIN `kriteria` ON `kriteria`.`id` = `penilaian_karyawan`.`kriteria_id`', [], false)
+ 4 APPPATH\Models\DataKriteriaModel.php(19): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Home.php(41): App\Models\DataKriteriaModel->getPenilaian()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->datakriteria()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 03:42:57 --> [Caused by] mysqli_sql_exception: Table 'weight_product.kriteria' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `penilaian_karyawan`.*, `karyawan_baru`.`nama_karyawan`, `kriteria`.`nama_kriteria`
+FROM `penilaian_karyawan`
+JOIN `karyawan_baru` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`
+JOIN `kriteria` ON `kriteria`.`id` = `penilaian_karyawan`.`kriteria_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `penilaian_karyawan`.*, `karyawan_baru`.`nama_karyawan`, `kriteria`.`nama_kriteria`
+FROM `penilaian_karyawan`
+JOIN `karyawan_baru` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`
+JOIN `kriteria` ON `kriteria`.`id` = `penilaian_karyawan`.`kriteria_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `penilaian_karyawan`.*, `karyawan_baru`.`nama_karyawan`, `kriteria`.`nama_kriteria`
+FROM `penilaian_karyawan`
+JOIN `karyawan_baru` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`
+JOIN `kriteria` ON `kriteria`.`id` = `penilaian_karyawan`.`kriteria_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `penilaian_karyawan`.*, `karyawan_baru`.`nama_karyawan`, `kriteria`.`nama_kriteria`
+FROM `penilaian_karyawan`
+JOIN `karyawan_baru` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`
+JOIN `kriteria` ON `kriteria`.`id` = `penilaian_karyawan`.`kriteria_id`', [], false)
+ 5 APPPATH\Models\DataKriteriaModel.php(19): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(41): App\Models\DataKriteriaModel->getPenilaian()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->datakriteria()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+ERROR - 2024-12-05 03:43:54 --> mysqli_sql_exception: Unknown column 'kriteria.nama_kriteria' in 'field list' in C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `penilai...', 0)
+#1 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `penilai...')
+#2 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `penilai...')
+#3 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `penilai...', Array, false)
+#4 C:\xampp\htdocs\ci_wp\app\Models\DataKriteriaModel.php(19): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci_wp\app\Controllers\Home.php(41): App\Models\DataKriteriaModel->getPenilaian()
+#6 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Home->datakriteria()
+#7 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\ci_wp\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-12-05 03:43:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'kriteria.nama_kriteria' in 'field list'
+[Method: GET, Route: datakriteria]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `penilaian_karyawan`.*, `karyawan_baru`.`nama_karyawan`, `kriteria`.`nama_kriteria`
+FROM `penilaian_karyawan`
+JOIN `karyawan_baru` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`
+JOIN `data_kriteria` ON `data_kriteria`.`id` = `penilaian_karyawan`.`kriteria_id`', [], false)
+ 2 APPPATH\Models\DataKriteriaModel.php(19): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(41): App\Models\DataKriteriaModel->getPenilaian()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->datakriteria()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 03:43:54 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'kriteria.nama_kriteria' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `penilaian_karyawan`.*, `karyawan_baru`.`nama_karyawan`, `kriteria`.`nama_kriteria`
+FROM `penilaian_karyawan`
+JOIN `karyawan_baru` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`
+JOIN `data_kriteria` ON `data_kriteria`.`id` = `penilaian_karyawan`.`kriteria_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `penilaian_karyawan`.*, `karyawan_baru`.`nama_karyawan`, `kriteria`.`nama_kriteria`
+FROM `penilaian_karyawan`
+JOIN `karyawan_baru` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`
+JOIN `data_kriteria` ON `data_kriteria`.`id` = `penilaian_karyawan`.`kriteria_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `penilaian_karyawan`.*, `karyawan_baru`.`nama_karyawan`, `kriteria`.`nama_kriteria`
+FROM `penilaian_karyawan`
+JOIN `karyawan_baru` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`
+JOIN `data_kriteria` ON `data_kriteria`.`id` = `penilaian_karyawan`.`kriteria_id`', [], false)
+ 4 APPPATH\Models\DataKriteriaModel.php(19): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Home.php(41): App\Models\DataKriteriaModel->getPenilaian()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->datakriteria()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 03:43:54 --> [Caused by] mysqli_sql_exception: Unknown column 'kriteria.nama_kriteria' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `penilaian_karyawan`.*, `karyawan_baru`.`nama_karyawan`, `kriteria`.`nama_kriteria`
+FROM `penilaian_karyawan`
+JOIN `karyawan_baru` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`
+JOIN `data_kriteria` ON `data_kriteria`.`id` = `penilaian_karyawan`.`kriteria_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `penilaian_karyawan`.*, `karyawan_baru`.`nama_karyawan`, `kriteria`.`nama_kriteria`
+FROM `penilaian_karyawan`
+JOIN `karyawan_baru` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`
+JOIN `data_kriteria` ON `data_kriteria`.`id` = `penilaian_karyawan`.`kriteria_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `penilaian_karyawan`.*, `karyawan_baru`.`nama_karyawan`, `kriteria`.`nama_kriteria`
+FROM `penilaian_karyawan`
+JOIN `karyawan_baru` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`
+JOIN `data_kriteria` ON `data_kriteria`.`id` = `penilaian_karyawan`.`kriteria_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `penilaian_karyawan`.*, `karyawan_baru`.`nama_karyawan`, `kriteria`.`nama_kriteria`
+FROM `penilaian_karyawan`
+JOIN `karyawan_baru` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`
+JOIN `data_kriteria` ON `data_kriteria`.`id` = `penilaian_karyawan`.`kriteria_id`', [], false)
+ 5 APPPATH\Models\DataKriteriaModel.php(19): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(41): App\Models\DataKriteriaModel->getPenilaian()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->datakriteria()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 03:50:36 --> ErrorException: Undefined variable $kriteria
+[Method: GET, Route: datakriteria]
+in APPPATH\Views\wp\datakriteria.php on line 37.
+ 1 APPPATH\Views\wp\datakriteria.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kriteria', 'C:\\xampp\\htdocs\\ci_wp\\app\\Views\\wp\\datakriteria.php', 37)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ci_wp\\app\\Views\\wp\\datakriteria.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('wp/datakriteria', [], true)
+ 5 APPPATH\Controllers\Home.php(44): view('wp/datakriteria', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->datakriteria()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 03:50:57 --> ErrorException: Undefined array key "nama_kriteria"
+[Method: GET, Route: datakriteria]
+in APPPATH\Views\wp\datakriteria.php on line 38.
+ 1 APPPATH\Views\wp\datakriteria.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_kriteria"', 'C:\\xampp\\htdocs\\ci_wp\\app\\Views\\wp\\datakriteria.php', 38)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ci_wp\\app\\Views\\wp\\datakriteria.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('wp/datakriteria', [], true)
+ 5 APPPATH\Controllers\Home.php(44): view('wp/datakriteria', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->datakriteria()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 04:46:39 --> Error: Class "App\Models\PenilaianKaryawanModel" not found
+[Method: GET, Route: penilaiankaryawan]
+in APPPATH\Controllers\Home.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->penilaiankaryawan()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 04:47:29 --> Error: Class "App\Models\PenilaianKaryawanModel" not found
+[Method: GET, Route: penilaiankaryawan]
+in APPPATH\Controllers\Home.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->penilaiankaryawan()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 04:48:55 --> Error: Class "App\Models\PenilaianKaryawanModel" not found
+[Method: GET, Route: penilaiankaryawan]
+in APPPATH\Controllers\Home.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->penilaiankaryawan()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 04:52:54 --> ErrorException: Undefined array key "tipe"
+[Method: GET, Route: datakriteria]
+in APPPATH\Views\wp\datakriteria.php on line 44.
+ 1 APPPATH\Views\wp\datakriteria.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tipe"', 'C:\\xampp\\htdocs\\ci_wp\\app\\Views\\wp\\datakriteria.php', 44)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ci_wp\\app\\Views\\wp\\datakriteria.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('wp/datakriteria', [], true)
+ 5 APPPATH\Controllers\Home.php(38): view('wp/datakriteria', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->datakriteria()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 06:22:45 --> ErrorException: Undefined property: App\Controllers\Home::$vektorVModel
+[Method: GET, Route: vektorv]
+in APPPATH\Controllers\Home.php on line 106.
+ 1 APPPATH\Controllers\Home.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$vektorVModel', 'C:\\xampp\\htdocs\\ci_wp\\app\\Controllers\\Home.php', 106)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->vektorv()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+ERROR - 2024-12-05 06:23:37 --> mysqli_sql_exception: Unknown column 'penilaian_karyawan.vektor_s' in 'field list' in C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `karyawa...', 0)
+#1 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `karyawa...')
+#2 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `karyawa...')
+#3 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `karyawa...', Array, false)
+#4 C:\xampp\htdocs\ci_wp\app\Models\VektorVModel.php(18): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci_wp\app\Models\VektorVModel.php(26): App\Models\VektorVModel->getVektorS()
+#6 C:\xampp\htdocs\ci_wp\app\Controllers\Home.php(104): App\Models\VektorVModel->getVektorV()
+#7 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Home->vektorv()
+#8 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\ci_wp\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2024-12-05 06:23:37 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'penilaian_karyawan.vektor_s' in 'field list'
+[Method: GET, Route: vektorv]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `karyawan_baru`.`nama_karyawan`, `penilaian_karyawan`.`vektor_s`
+FROM `karyawan_baru`
+JOIN `penilaian_karyawan` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`', [], false)
+ 2 APPPATH\Models\VektorVModel.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Models\VektorVModel.php(26): App\Models\VektorVModel->getVektorS()
+ 4 APPPATH\Controllers\Home.php(104): App\Models\VektorVModel->getVektorV()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->vektorv()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 06:23:37 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'penilaian_karyawan.vektor_s' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `karyawan_baru`.`nama_karyawan`, `penilaian_karyawan`.`vektor_s`
+FROM `karyawan_baru`
+JOIN `penilaian_karyawan` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `karyawan_baru`.`nama_karyawan`, `penilaian_karyawan`.`vektor_s`
+FROM `karyawan_baru`
+JOIN `penilaian_karyawan` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `karyawan_baru`.`nama_karyawan`, `penilaian_karyawan`.`vektor_s`
+FROM `karyawan_baru`
+JOIN `penilaian_karyawan` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`', [], false)
+ 4 APPPATH\Models\VektorVModel.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Models\VektorVModel.php(26): App\Models\VektorVModel->getVektorS()
+ 6 APPPATH\Controllers\Home.php(104): App\Models\VektorVModel->getVektorV()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->vektorv()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 06:23:37 --> [Caused by] mysqli_sql_exception: Unknown column 'penilaian_karyawan.vektor_s' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `karyawan_baru`.`nama_karyawan`, `penilaian_karyawan`.`vektor_s`
+FROM `karyawan_baru`
+JOIN `penilaian_karyawan` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `karyawan_baru`.`nama_karyawan`, `penilaian_karyawan`.`vektor_s`
+FROM `karyawan_baru`
+JOIN `penilaian_karyawan` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `karyawan_baru`.`nama_karyawan`, `penilaian_karyawan`.`vektor_s`
+FROM `karyawan_baru`
+JOIN `penilaian_karyawan` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `karyawan_baru`.`nama_karyawan`, `penilaian_karyawan`.`vektor_s`
+FROM `karyawan_baru`
+JOIN `penilaian_karyawan` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`', [], false)
+ 5 APPPATH\Models\VektorVModel.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Models\VektorVModel.php(26): App\Models\VektorVModel->getVektorS()
+ 7 APPPATH\Controllers\Home.php(104): App\Models\VektorVModel->getVektorV()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->vektorv()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+ERROR - 2024-12-05 06:25:47 --> mysqli_sql_exception: Unknown column 'penilaian_karyawan.vektor_s' in 'field list' in C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `karyawa...', 0)
+#1 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `karyawa...')
+#2 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `karyawa...')
+#3 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `karyawa...', Array, false)
+#4 C:\xampp\htdocs\ci_wp\app\Models\VektorVModel.php(18): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci_wp\app\Models\VektorVModel.php(26): App\Models\VektorVModel->getVektorS()
+#6 C:\xampp\htdocs\ci_wp\app\Controllers\Home.php(104): App\Models\VektorVModel->getVektorV()
+#7 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Home->vektorv()
+#8 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\ci_wp\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2024-12-05 06:25:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'penilaian_karyawan.vektor_s' in 'field list'
+[Method: GET, Route: vektorv]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `karyawan_baru`.`nama_karyawan`, `penilaian_karyawan`.`vektor_s`
+FROM `karyawan_baru`
+JOIN `penilaian_karyawan` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`', [], false)
+ 2 APPPATH\Models\VektorVModel.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Models\VektorVModel.php(26): App\Models\VektorVModel->getVektorS()
+ 4 APPPATH\Controllers\Home.php(104): App\Models\VektorVModel->getVektorV()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->vektorv()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 06:25:47 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'penilaian_karyawan.vektor_s' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `karyawan_baru`.`nama_karyawan`, `penilaian_karyawan`.`vektor_s`
+FROM `karyawan_baru`
+JOIN `penilaian_karyawan` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `karyawan_baru`.`nama_karyawan`, `penilaian_karyawan`.`vektor_s`
+FROM `karyawan_baru`
+JOIN `penilaian_karyawan` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `karyawan_baru`.`nama_karyawan`, `penilaian_karyawan`.`vektor_s`
+FROM `karyawan_baru`
+JOIN `penilaian_karyawan` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`', [], false)
+ 4 APPPATH\Models\VektorVModel.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Models\VektorVModel.php(26): App\Models\VektorVModel->getVektorS()
+ 6 APPPATH\Controllers\Home.php(104): App\Models\VektorVModel->getVektorV()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->vektorv()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 06:25:47 --> [Caused by] mysqli_sql_exception: Unknown column 'penilaian_karyawan.vektor_s' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `karyawan_baru`.`nama_karyawan`, `penilaian_karyawan`.`vektor_s`
+FROM `karyawan_baru`
+JOIN `penilaian_karyawan` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `karyawan_baru`.`nama_karyawan`, `penilaian_karyawan`.`vektor_s`
+FROM `karyawan_baru`
+JOIN `penilaian_karyawan` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `karyawan_baru`.`nama_karyawan`, `penilaian_karyawan`.`vektor_s`
+FROM `karyawan_baru`
+JOIN `penilaian_karyawan` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `karyawan_baru`.`nama_karyawan`, `penilaian_karyawan`.`vektor_s`
+FROM `karyawan_baru`
+JOIN `penilaian_karyawan` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`', [], false)
+ 5 APPPATH\Models\VektorVModel.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Models\VektorVModel.php(26): App\Models\VektorVModel->getVektorS()
+ 7 APPPATH\Controllers\Home.php(104): App\Models\VektorVModel->getVektorV()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->vektorv()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+ERROR - 2024-12-05 06:26:03 --> mysqli_sql_exception: Unknown column 'penilaian_karyawan.vektor_s' in 'field list' in C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `karyawa...', 0)
+#1 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `karyawa...')
+#2 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `karyawa...')
+#3 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `karyawa...', Array, false)
+#4 C:\xampp\htdocs\ci_wp\app\Models\VektorVModel.php(18): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci_wp\app\Models\VektorVModel.php(26): App\Models\VektorVModel->getVektorS()
+#6 C:\xampp\htdocs\ci_wp\app\Controllers\Home.php(104): App\Models\VektorVModel->getVektorV()
+#7 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Home->vektorv()
+#8 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\ci_wp\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2024-12-05 06:26:03 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'penilaian_karyawan.vektor_s' in 'field list'
+[Method: GET, Route: vektorv]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `karyawan_baru`.`nama_karyawan`, `penilaian_karyawan`.`vektor_s`
+FROM `karyawan_baru`
+JOIN `penilaian_karyawan` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`', [], false)
+ 2 APPPATH\Models\VektorVModel.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Models\VektorVModel.php(26): App\Models\VektorVModel->getVektorS()
+ 4 APPPATH\Controllers\Home.php(104): App\Models\VektorVModel->getVektorV()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->vektorv()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 06:26:03 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'penilaian_karyawan.vektor_s' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `karyawan_baru`.`nama_karyawan`, `penilaian_karyawan`.`vektor_s`
+FROM `karyawan_baru`
+JOIN `penilaian_karyawan` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `karyawan_baru`.`nama_karyawan`, `penilaian_karyawan`.`vektor_s`
+FROM `karyawan_baru`
+JOIN `penilaian_karyawan` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `karyawan_baru`.`nama_karyawan`, `penilaian_karyawan`.`vektor_s`
+FROM `karyawan_baru`
+JOIN `penilaian_karyawan` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`', [], false)
+ 4 APPPATH\Models\VektorVModel.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Models\VektorVModel.php(26): App\Models\VektorVModel->getVektorS()
+ 6 APPPATH\Controllers\Home.php(104): App\Models\VektorVModel->getVektorV()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->vektorv()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 06:26:03 --> [Caused by] mysqli_sql_exception: Unknown column 'penilaian_karyawan.vektor_s' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `karyawan_baru`.`nama_karyawan`, `penilaian_karyawan`.`vektor_s`
+FROM `karyawan_baru`
+JOIN `penilaian_karyawan` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `karyawan_baru`.`nama_karyawan`, `penilaian_karyawan`.`vektor_s`
+FROM `karyawan_baru`
+JOIN `penilaian_karyawan` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `karyawan_baru`.`nama_karyawan`, `penilaian_karyawan`.`vektor_s`
+FROM `karyawan_baru`
+JOIN `penilaian_karyawan` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `karyawan_baru`.`nama_karyawan`, `penilaian_karyawan`.`vektor_s`
+FROM `karyawan_baru`
+JOIN `penilaian_karyawan` ON `karyawan_baru`.`id` = `penilaian_karyawan`.`karyawan_id`', [], false)
+ 5 APPPATH\Models\VektorVModel.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Models\VektorVModel.php(26): App\Models\VektorVModel->getVektorS()
+ 7 APPPATH\Controllers\Home.php(104): App\Models\VektorVModel->getVektorV()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->vektorv()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 06:44:59 --> ErrorException: Undefined variable $vektorS
+[Method: GET, Route: vektorsv]
+in APPPATH\Views\wp\vektorsv.php on line 37.
+ 1 APPPATH\Views\wp\vektorsv.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $vektorS', 'C:\\xampp\\htdocs\\ci_wp\\app\\Views\\wp\\vektorsv.php', 37)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ci_wp\\app\\Views\\wp\\vektorsv.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('wp/vektorsv', [], true)
+ 5 APPPATH\Controllers\Home.php(122): view('wp/vektorsv', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->vektor_s_v()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 06:45:51 --> ErrorException: Undefined variable $vektorS
+[Method: GET, Route: vektorsv]
+in APPPATH\Views\wp\vektorsv.php on line 37.
+ 1 APPPATH\Views\wp\vektorsv.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $vektorS', 'C:\\xampp\\htdocs\\ci_wp\\app\\Views\\wp\\vektorsv.php', 37)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ci_wp\\app\\Views\\wp\\vektorsv.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('wp/vektorsv', [], true)
+ 5 APPPATH\Controllers\Home.php(122): view('wp/vektorsv', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->vektor_s_v()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 07:18:14 --> Error: Class "App\Controllers\VektorSModel" not found
+[Method: GET, Route: perangkingan]
+in APPPATH\Controllers\Home.php on line 128.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->perangkingan()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 07:27:07 --> Error: Class "App\Controllers\VektorSModel" not found
+[Method: GET, Route: hasilkeputusan]
+in APPPATH\Controllers\Home.php on line 186.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->hasilkeputusan()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 10:38:01 --> ErrorException: Declaration of App\Models\KaryawanBaruModel::update($id, $data) must be compatible with CodeIgniter\Model::update($id = null, $row = null): bool
+[Method: GET, Route: karyawanbaru]
+in APPPATH\Models\KaryawanBaruModel.php on line 50.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-12-05 10:39:37 --> ErrorException: Declaration of App\Models\KaryawanBaruModel::save($data) must be compatible with CodeIgniter\BaseModel::save($row): bool
+[Method: GET, Route: karyawanbaru]
+in APPPATH\Models\KaryawanBaruModel.php on line 44.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-12-05 10:39:47 --> ErrorException: Declaration of App\Models\KaryawanBaruModel::delete($id) must be compatible with CodeIgniter\BaseModel::delete($id = null, bool $purge = false)
+[Method: GET, Route: karyawanbaru]
+in APPPATH\Models\KaryawanBaruModel.php on line 44.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-12-05 11:08:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 11:08:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 11:08:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 11:09:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 11:09:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 11:09:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 11:12:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 11:12:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-05 11:14:14 --> ErrorException: Undefined variable $data
+[Method: GET, Route: karyawanbaru/createkaryawan]
+in APPPATH\Controllers\Home.php on line 96.
+ 1 APPPATH\Controllers\Home.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\ci_wp\\app\\Controllers\\Home.php', 96)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->createkaryawan()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+INFO - 2024-12-05 11:14:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 11:16:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 11:16:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 11:16:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 11:17:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 11:17:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 11:19:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 11:22:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 11:22:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 11:36:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 11:39:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 11:39:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 11:39:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 11:39:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 11:40:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 11:40:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 11:44:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 11:44:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 11:45:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 11:46:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 11:46:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 11:47:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 11:48:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 11:48:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 11:48:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 11:48:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 11:50:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 11:51:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 11:52:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 11:52:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 11:53:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 11:53:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 11:53:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 11:59:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 11:59:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 12:00:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 12:03:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 12:05:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 12:07:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 12:08:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 12:13:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 12:15:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 12:15:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 12:15:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 12:15:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 12:15:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 12:18:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 12:18:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 12:19:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 12:19:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 12:19:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 12:19:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 12:20:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 12:20:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 12:20:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 12:20:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-05 12:44:05 --> Error connecting to the database: ErrorException: mysqli::real_connect(): Error while reading greeting packet. PID=14304 in C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', 'C:\\xampp\\htdocs...', 186)
+#1 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'weight_product', 3306, '', 0)
+#2 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#5 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#6 C:\xampp\htdocs\ci_wp\app\Controllers\Home.php(20): CodeIgniter\Model->countAllResults()
+#7 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#8 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\ci_wp\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+
+Next mysqli_sql_exception: MySQL server has gone away in C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'weight_product', 3306, '', 0)
+#1 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 C:\xampp\htdocs\ci_wp\app\Controllers\Home.php(20): CodeIgniter\Model->countAllResults()
+#6 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#7 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\ci_wp\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: MySQL server has gone away in C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#4 C:\xampp\htdocs\ci_wp\app\Controllers\Home.php(20): CodeIgniter\Model->countAllResults()
+#5 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\ci_wp\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-12-05 12:44:05 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: MySQL server has gone away
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `karyawan_baru`', [], false)
+ 3 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 4 APPPATH\Controllers\Home.php(20): CodeIgniter\Model->countAllResults()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 12:59:34 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "wp/karyawanbaru_create.php"
+[Method: GET, Route: karyawanbaru_create]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('wp/karyawanbaru_create.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('wp/karyawanbaru_create', [], true)
+ 3 APPPATH\Controllers\Home.php(52): view('wp/karyawanbaru_create')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->create()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+INFO - 2024-12-05 12:59:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 13:01:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 13:01:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 13:02:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 13:02:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 13:06:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 13:07:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 13:14:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 13:14:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 13:14:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 13:14:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 13:17:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 13:18:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-05 13:19:01 --> CodeIgniter\Database\Exceptions\DataException: There is no data to insert.
+[Method: POST, Route: storekaryawan]
+in SYSTEMPATH\BaseModel.php on line 826.
+ 1 SYSTEMPATH\BaseModel.php(826): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([], false)
+ 3 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 4 APPPATH\Controllers\Home.php(73): CodeIgniter\BaseModel->save([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->storekaryawan()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+INFO - 2024-12-05 13:20:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-05 13:20:18 --> mysqli_sql_exception: Unknown column 'created_at' in 'field list' in C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `ka...', 0)
+#1 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ka...')
+#2 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ka...')
+#3 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ka...', Array, false)
+#4 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\ci_wp\app\Controllers\Home.php(73): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Home->storekaryawan()
+#10 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#11 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\ci_wp\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+CRITICAL - 2024-12-05 13:20:18 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'field list'
+[Method: POST, Route: storekaryawan]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `karyawan_baru` (`nama_karyawan`, `created_at`, `updated_at`) VALUES (:nama_karyawan:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Home.php(73): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->storekaryawan()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 13:20:18 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `karyawan_baru` (`nama_karyawan`, `created_at`, `updated_at`) VALUES (\'Luqman\', \'2024-12-05 13:20:18\', \'2024-12-05 13:20:18\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `karyawan_baru` (`nama_karyawan`, `created_at`, `updated_at`) VALUES (\'Luqman\', \'2024-12-05 13:20:18\', \'2024-12-05 13:20:18\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `karyawan_baru` (`nama_karyawan`, `created_at`, `updated_at`) VALUES (:nama_karyawan:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Home.php(73): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->storekaryawan()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 13:20:18 --> [Caused by] mysqli_sql_exception: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `karyawan_baru` (`nama_karyawan`, `created_at`, `updated_at`) VALUES (\'Luqman\', \'2024-12-05 13:20:18\', \'2024-12-05 13:20:18\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `karyawan_baru` (`nama_karyawan`, `created_at`, `updated_at`) VALUES (\'Luqman\', \'2024-12-05 13:20:18\', \'2024-12-05 13:20:18\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `karyawan_baru` (`nama_karyawan`, `created_at`, `updated_at`) VALUES (\'Luqman\', \'2024-12-05 13:20:18\', \'2024-12-05 13:20:18\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `karyawan_baru` (`nama_karyawan`, `created_at`, `updated_at`) VALUES (:nama_karyawan:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Home.php(73): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->storekaryawan()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+INFO - 2024-12-05 13:21:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-05 13:21:03 --> mysqli_sql_exception: Unknown column 'created_at' in 'field list' in C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `ka...', 0)
+#1 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ka...')
+#2 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ka...')
+#3 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ka...', Array, false)
+#4 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\ci_wp\app\Controllers\Home.php(73): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Home->storekaryawan()
+#10 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#11 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\ci_wp\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+CRITICAL - 2024-12-05 13:21:03 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'field list'
+[Method: POST, Route: storekaryawan]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `karyawan_baru` (`nama_karyawan`, `created_at`, `updated_at`) VALUES (:nama_karyawan:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Home.php(73): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->storekaryawan()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 13:21:03 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `karyawan_baru` (`nama_karyawan`, `created_at`, `updated_at`) VALUES (\'Luqman\', \'2024-12-05 13:21:03\', \'2024-12-05 13:21:03\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `karyawan_baru` (`nama_karyawan`, `created_at`, `updated_at`) VALUES (\'Luqman\', \'2024-12-05 13:21:03\', \'2024-12-05 13:21:03\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `karyawan_baru` (`nama_karyawan`, `created_at`, `updated_at`) VALUES (:nama_karyawan:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Home.php(73): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->storekaryawan()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 13:21:03 --> [Caused by] mysqli_sql_exception: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `karyawan_baru` (`nama_karyawan`, `created_at`, `updated_at`) VALUES (\'Luqman\', \'2024-12-05 13:21:03\', \'2024-12-05 13:21:03\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `karyawan_baru` (`nama_karyawan`, `created_at`, `updated_at`) VALUES (\'Luqman\', \'2024-12-05 13:21:03\', \'2024-12-05 13:21:03\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `karyawan_baru` (`nama_karyawan`, `created_at`, `updated_at`) VALUES (\'Luqman\', \'2024-12-05 13:21:03\', \'2024-12-05 13:21:03\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `karyawan_baru` (`nama_karyawan`, `created_at`, `updated_at`) VALUES (:nama_karyawan:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Home.php(73): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->storekaryawan()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+INFO - 2024-12-05 13:21:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 13:23:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 13:26:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 13:27:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-05 13:38:05 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: karyawanbaru]
+in APPPATH\Views\wp\karyawanbaru.php on line 43.
+ 1 APPPATH\Views\wp\karyawanbaru.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\ci_wp\\app\\Views\\wp\\karyawanbaru.php', 43)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ci_wp\\app\\Views\\wp\\karyawanbaru.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('wp/karyawanbaru', [], true)
+ 5 APPPATH\Controllers\Home.php(44): view('wp/karyawanbaru', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->karyawanbaru()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 13:38:40 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: karyawanbaru]
+in APPPATH\Views\wp\karyawanbaru.php on line 43.
+ 1 APPPATH\Views\wp\karyawanbaru.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\ci_wp\\app\\Views\\wp\\karyawanbaru.php', 43)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ci_wp\\app\\Views\\wp\\karyawanbaru.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('wp/karyawanbaru', [], true)
+ 5 APPPATH\Controllers\Home.php(44): view('wp/karyawanbaru', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->karyawanbaru()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 13:38:48 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: karyawanbaru]
+in APPPATH\Views\wp\karyawanbaru.php on line 43.
+ 1 APPPATH\Views\wp\karyawanbaru.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\ci_wp\\app\\Views\\wp\\karyawanbaru.php', 43)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ci_wp\\app\\Views\\wp\\karyawanbaru.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('wp/karyawanbaru', [], true)
+ 5 APPPATH\Controllers\Home.php(44): view('wp/karyawanbaru', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->karyawanbaru()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 13:40:02 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: karyawanbaru]
+in APPPATH\Views\wp\karyawanbaru.php on line 43.
+ 1 APPPATH\Views\wp\karyawanbaru.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\ci_wp\\app\\Views\\wp\\karyawanbaru.php', 43)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ci_wp\\app\\Views\\wp\\karyawanbaru.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('wp/karyawanbaru', [], true)
+ 5 APPPATH\Controllers\Home.php(44): view('wp/karyawanbaru', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->karyawanbaru()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 13:40:35 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: karyawanbaru]
+in APPPATH\Views\wp\karyawanbaru.php on line 43.
+ 1 APPPATH\Views\wp\karyawanbaru.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\ci_wp\\app\\Views\\wp\\karyawanbaru.php', 43)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ci_wp\\app\\Views\\wp\\karyawanbaru.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('wp/karyawanbaru', [], true)
+ 5 APPPATH\Controllers\Home.php(44): view('wp/karyawanbaru', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->karyawanbaru()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 13:41:52 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: karyawanbaru]
+in APPPATH\Views\wp\karyawanbaru.php on line 43.
+ 1 APPPATH\Views\wp\karyawanbaru.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\ci_wp\\app\\Views\\wp\\karyawanbaru.php', 43)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ci_wp\\app\\Views\\wp\\karyawanbaru.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('wp/karyawanbaru', [], true)
+ 5 APPPATH\Controllers\Home.php(44): view('wp/karyawanbaru', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->karyawanbaru()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 13:44:01 --> TypeError: Unsupported operand types: string + int
+[Method: GET, Route: editKaryawan/1]
+in APPPATH\Views\wp\karyawanbaru.php on line 40.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('wp/karyawanbaru', [], true)
+ 4 APPPATH\Controllers\Home.php(102): view('wp/karyawanbaru', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->editKaryawan('1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 13:44:09 --> TypeError: Unsupported operand types: string + int
+[Method: GET, Route: editKaryawan/1]
+in APPPATH\Views\wp\karyawanbaru.php on line 40.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('wp/karyawanbaru', [], true)
+ 4 APPPATH\Controllers\Home.php(102): view('wp/karyawanbaru', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->editKaryawan('1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 13:45:07 --> ErrorException: Undefined variable $index
+[Method: GET, Route: karyawanbaru]
+in APPPATH\Views\wp\karyawanbaru.php on line 41.
+ 1 APPPATH\Views\wp\karyawanbaru.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $index', 'C:\\xampp\\htdocs\\ci_wp\\app\\Views\\wp\\karyawanbaru.php', 41)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ci_wp\\app\\Views\\wp\\karyawanbaru.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('wp/karyawanbaru', [], true)
+ 5 APPPATH\Controllers\Home.php(44): view('wp/karyawanbaru', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->karyawanbaru()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 13:45:26 --> ErrorException: Undefined variable $index
+[Method: GET, Route: karyawanbaru]
+in APPPATH\Views\wp\karyawanbaru.php on line 41.
+ 1 APPPATH\Views\wp\karyawanbaru.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $index', 'C:\\xampp\\htdocs\\ci_wp\\app\\Views\\wp\\karyawanbaru.php', 41)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ci_wp\\app\\Views\\wp\\karyawanbaru.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('wp/karyawanbaru', [], true)
+ 5 APPPATH\Controllers\Home.php(44): view('wp/karyawanbaru', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->karyawanbaru()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 13:46:04 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: karyawanbaru]
+in APPPATH\Views\wp\karyawanbaru.php on line 43.
+ 1 APPPATH\Views\wp\karyawanbaru.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\ci_wp\\app\\Views\\wp\\karyawanbaru.php', 43)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ci_wp\\app\\Views\\wp\\karyawanbaru.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('wp/karyawanbaru', [], true)
+ 5 APPPATH\Controllers\Home.php(44): view('wp/karyawanbaru', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->karyawanbaru()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 13:46:15 --> TypeError: Unsupported operand types: string + int
+[Method: GET, Route: editKaryawan/1]
+in APPPATH\Views\wp\karyawanbaru.php on line 40.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('wp/karyawanbaru', [], true)
+ 4 APPPATH\Controllers\Home.php(102): view('wp/karyawanbaru', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->editKaryawan('1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 13:46:59 --> TypeError: Unsupported operand types: string + int
+[Method: GET, Route: editKaryawan/4]
+in APPPATH\Views\wp\karyawanbaru.php on line 40.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('wp/karyawanbaru', [], true)
+ 4 APPPATH\Controllers\Home.php(102): view('wp/karyawanbaru', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->editKaryawan('4')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 13:47:04 --> TypeError: Unsupported operand types: string + int
+[Method: GET, Route: editKaryawan/1]
+in APPPATH\Views\wp\karyawanbaru.php on line 40.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('wp/karyawanbaru', [], true)
+ 4 APPPATH\Controllers\Home.php(102): view('wp/karyawanbaru', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->editKaryawan('1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 13:48:12 --> TypeError: Unsupported operand types: string + int
+[Method: GET, Route: editKaryawan/1]
+in APPPATH\Views\wp\karyawanbaru.php on line 40.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('wp/karyawanbaru', [], true)
+ 4 APPPATH\Controllers\Home.php(102): view('wp/karyawanbaru', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->editKaryawan('1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 13:50:30 --> TypeError: Unsupported operand types: string + int
+[Method: GET, Route: editKaryawan/1]
+in APPPATH\Views\wp\karyawanbaru.php on line 40.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('wp/karyawanbaru', [], true)
+ 4 APPPATH\Controllers\Home.php(102): view('wp/karyawanbaru', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->editKaryawan('1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 13:50:31 --> TypeError: Unsupported operand types: string + int
+[Method: GET, Route: editKaryawan/1]
+in APPPATH\Views\wp\karyawanbaru.php on line 40.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('wp/karyawanbaru', [], true)
+ 4 APPPATH\Controllers\Home.php(102): view('wp/karyawanbaru', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->editKaryawan('1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 13:52:53 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: editKaryawan/1]
+in APPPATH\Views\wp\karyawanbaru.php on line 41.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('wp/karyawanbaru', [], true)
+ 4 APPPATH\Controllers\Home.php(102): view('wp/karyawanbaru', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->editKaryawan('1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+INFO - 2024-12-05 13:55:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-05 13:55:17 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: editKaryawan/1]
+in APPPATH\Views\wp\karyawanbaru.php on line 39.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('wp/karyawanbaru', [], true)
+ 4 APPPATH\Controllers\Home.php(102): view('wp/karyawanbaru', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->editKaryawan('1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 13:57:21 --> TypeError: Unsupported operand types: string + int
+[Method: GET, Route: editKaryawan/1]
+in APPPATH\Views\wp\karyawanbaru.php on line 40.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('wp/karyawanbaru', [], true)
+ 4 APPPATH\Controllers\Home.php(102): view('wp/karyawanbaru', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->editKaryawan('1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 14:00:53 --> TypeError: Unsupported operand types: string + int
+[Method: GET, Route: editKaryawan/1]
+in APPPATH\Views\wp\karyawanbaru.php on line 40.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('wp/karyawanbaru', [], true)
+ 4 APPPATH\Controllers\Home.php(102): view('wp/karyawanbaru', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->editKaryawan('1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 14:01:22 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: editKaryawan/1]
+in APPPATH\Views\wp\karyawanbaru.php on line 39.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('wp/karyawanbaru', [], true)
+ 4 APPPATH\Controllers\Home.php(102): view('wp/karyawanbaru', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->editKaryawan('1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 14:01:39 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: editKaryawan/1]
+in APPPATH\Views\wp\karyawanbaru.php on line 39.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('wp/karyawanbaru', [], true)
+ 4 APPPATH\Controllers\Home.php(102): view('wp/karyawanbaru', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->editKaryawan('1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 14:02:50 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: editKaryawan/1]
+in APPPATH\Views\wp\karyawanbaru.php on line 39.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('wp/karyawanbaru', [], true)
+ 4 APPPATH\Controllers\Home.php(107): view('wp/karyawanbaru', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->editKaryawan('1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 14:03:35 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: editKaryawan/1]
+in APPPATH\Views\wp\karyawanbaru.php on line 39.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('wp/karyawanbaru', [], true)
+ 4 APPPATH\Controllers\Home.php(107): view('wp/karyawanbaru', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->editKaryawan('1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 14:04:06 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: editKaryawan/1]
+in APPPATH\Views\wp\karyawanbaru.php on line 39.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('wp/karyawanbaru', [], true)
+ 4 APPPATH\Controllers\Home.php(107): view('wp/karyawanbaru', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->editKaryawan('1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 14:04:31 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: karyawanbaru]
+in APPPATH\Views\wp\karyawanbaru.php on line 43.
+ 1 APPPATH\Views\wp\karyawanbaru.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\ci_wp\\app\\Views\\wp\\karyawanbaru.php', 43)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ci_wp\\app\\Views\\wp\\karyawanbaru.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('wp/karyawanbaru', [], true)
+ 5 APPPATH\Controllers\Home.php(49): view('wp/karyawanbaru', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->karyawanbaru()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-05 14:04:44 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: karyawanbaru]
+in APPPATH\Views\wp\karyawanbaru.php on line 43.
+ 1 APPPATH\Views\wp\karyawanbaru.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\ci_wp\\app\\Views\\wp\\karyawanbaru.php', 43)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ci_wp\\app\\Views\\wp\\karyawanbaru.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('wp/karyawanbaru', [], true)
+ 5 APPPATH\Controllers\Home.php(44): view('wp/karyawanbaru', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->karyawanbaru()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+INFO - 2024-12-05 14:10:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 14:10:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 14:10:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 14:11:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 14:11:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 14:11:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 14:11:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 14:16:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 14:17:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 14:17:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

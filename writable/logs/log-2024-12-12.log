@@ -1,0 +1,124 @@
+CRITICAL - 2024-12-12 00:37:50 --> TypeError: Unsupported operand types: string + int
+[Method: GET, Route: editKaryawan/1]
+in APPPATH\Views\wp\karyawanbaru.php on line 40.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('wp/karyawanbaru', [], true)
+ 4 APPPATH\Controllers\Home.php(102): view('wp/karyawanbaru', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->editKaryawan('1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+CRITICAL - 2024-12-12 00:38:23 --> TypeError: Unsupported operand types: string + int
+[Method: GET, Route: editKaryawan/1]
+in APPPATH\Views\wp\karyawanbaru.php on line 40.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('wp/karyawanbaru', [], true)
+ 4 APPPATH\Controllers\Home.php(102): view('wp/karyawanbaru', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->editKaryawan('1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+ERROR - 2024-12-12 00:46:05 --> Edit Karyawan ID: 1
+CRITICAL - 2024-12-12 00:46:05 --> TypeError: Unsupported operand types: string + int
+[Method: GET, Route: editKaryawan/1]
+in APPPATH\Views\wp\karyawanbaru.php on line 40.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('wp/karyawanbaru', [], true)
+ 4 APPPATH\Controllers\Home.php(104): view('wp/karyawanbaru', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->editKaryawan('1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+ERROR - 2024-12-12 00:46:39 --> Edit Karyawan ID: 1
+CRITICAL - 2024-12-12 00:46:39 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: editKaryawan/1]
+in APPPATH\Views\wp\karyawanbaru.php on line 40.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('wp/karyawanbaru', [], true)
+ 4 APPPATH\Controllers\Home.php(104): view('wp/karyawanbaru', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->editKaryawan('1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+ERROR - 2024-12-12 00:49:24 --> Edit Karyawan ID: 1
+CRITICAL - 2024-12-12 00:49:24 --> TypeError: Unsupported operand types: string + int
+[Method: GET, Route: editkaryawan/1]
+in APPPATH\Views\wp\karyawanbaru.php on line 40.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('wp/karyawanbaru', [], true)
+ 4 APPPATH\Controllers\Home.php(104): view('wp/karyawanbaru', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->editKaryawan('1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+ERROR - 2024-12-12 00:50:18 --> Edit Karyawan ID: 1
+CRITICAL - 2024-12-12 00:50:18 --> TypeError: Unsupported operand types: string + int
+[Method: GET, Route: editkaryawan/1]
+in APPPATH\Views\wp\karyawanbaru.php on line 40.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('wp/karyawanbaru', [], true)
+ 4 APPPATH\Controllers\Home.php(104): view('wp/karyawanbaru', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->editkaryawan('1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+ERROR - 2024-12-12 00:51:14 --> Edit Karyawan ID: 1
+INFO - 2024-12-12 00:51:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-12 00:52:31 --> Edit Karyawan ID: 2
+INFO - 2024-12-12 00:52:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-12 00:53:20 --> Edit Karyawan ID: 1
+INFO - 2024-12-12 00:53:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-12 00:53:26 --> Edit Karyawan ID: 2
+INFO - 2024-12-12 00:53:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-12 00:55:30 --> Edit Karyawan ID: 1
+ERROR - 2024-12-12 00:57:09 --> Edit Karyawan ID: 1
+INFO - 2024-12-12 00:57:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-12 00:58:44 --> Edit Karyawan ID: 1
+INFO - 2024-12-12 00:58:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-12 00:59:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-12 00:59:07 --> Edit Karyawan ID: 30
+INFO - 2024-12-12 00:59:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-12 00:59:14 --> TypeError: CodeIgniter\Validation\Validation::setRules(): Argument #1 ($rules) must be of type array, CodeIgniter\Validation\Validation given, called in C:\xampp\htdocs\ci_wp\vendor\codeigniter4\framework\system\Controller.php on line 181
+[Method: POST, Route: updateKaryawan/30]
+in SYSTEMPATH\Validation\Validation.php on line 590.
+ 1 SYSTEMPATH\Controller.php(181): CodeIgniter\Validation\Validation->setRules(Object(CodeIgniter\Validation\Validation), [])
+ 2 SYSTEMPATH\Controller.php(135): CodeIgniter\Controller->setValidator(Object(CodeIgniter\Validation\Validation), [])
+ 3 APPPATH\Controllers\Home.php(118): CodeIgniter\Controller->validate(Object(CodeIgniter\Validation\Validation))
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->updateKaryawan('30')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci_wp\\public\\index.php')
+ERROR - 2024-12-12 01:02:28 --> Edit Karyawan ID: 30
+INFO - 2024-12-12 01:02:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-12 01:02:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-12 01:02:47 --> Edit Karyawan ID: 30
+INFO - 2024-12-12 01:02:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-12 01:02:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-12 01:03:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
